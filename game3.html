@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Chơi: Traffic Jam Hop On – Brainrot Awareness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            /* Typography */
+            --font-base: 'Inter', system-ui, -apple-system, sans-serif;
+            --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+            --font-size-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+            --font-size-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+            --font-size-lg: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+            --font-size-xl: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+            --line-height-tight: 1.2;
+            --line-height-base: 1.6;
+            --tracking-tight: -0.02em;
+
+            /* Colors - Strategy game palette (emerald/teal for planning) */
+            --surface-0: #05090C;
+            --surface-1: #0A1114;
+            --surface-2: #0F191E;
+            --surface-3: #16252B;
+            --surface-4: #1E3138;
+            --surface-5: #283E46;
+
+            --accent: #10B981;
+            --accent-muted: #34D399;
+            --text-primary: #ECFDF5;
+            --text-secondary: #86EFAC;
+            --text-tertiary: #4ADE80;
+
+            /* Spacing */
+            --space-xs: 0.5rem;
+            --space-sm: 0.75rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+
+            /* Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-pill: 999px;
+
+            /* Shadow */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+            --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-base);
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-base);
+            background: linear-gradient(180deg, var(--surface-0) 0%, var(--surface-2) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        main {
+            padding: var(--space-3xl) var(--space-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            margin-bottom: var(--space-xl);
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-pill);
+            background: rgba(16, 185, 129, 0.1);
+            transition: all 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(16, 185, 129, 0.2);
+            transform: translateX(-2px);
+        }
+
+        .game-card {
+            background: var(--surface-3);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+            padding: var(--space-2xl);
+            max-width: 1024px;
+            margin: 0 auto;
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
+
+        .game-header {
+            margin-bottom: var(--space-xl);
+        }
+
+        .game-title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            letter-spacing: var(--tracking-tight);
+            line-height: var(--line-height-tight);
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-muted) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .game-description {
+            font-size: var(--font-size-sm);
+            color: var(--text-secondary);
+            line-height: var(--line-height-base);
+        }
+
+        .game-frame {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: var(--surface-1);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: inset 0 0 0 1px rgba(16, 185, 129, 0.2);
+        }
+
+        .game-frame iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: var(--radius-lg);
+        }
+
+        .game-footer {
+            margin-top: var(--space-xl);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .game-meta {
+            font-size: var(--font-size-xs);
+            color: var(--text-tertiary);
+            padding: var(--space-sm) var(--space-md);
+            background: var(--surface-4);
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(16, 185, 129, 0.08);
+        }
+
+        .game-meta strong {
+            display: block;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+            font-size: var(--font-size-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: var(--space-xl) var(--space-md);
+            }
+
+            .game-card {
+                padding: var(--space-lg);
+            }
+
+            .game-footer {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <a href="index.html#fun" class="back-link">
+            <i class="w-4 h-4" data-lucide="chevron-left"></i>
+            <span>Quay lại Góc Giải Trí</span>
+        </a>
+
+        <div class="game-card">
+            <header class="game-header">
+                <h1 class="game-title">Traffic Jam Hop On</h1>
+                <p class="game-description">Thử thách tư duy chiến lược của bạn để xử lí được ùn tắc giao thông cho các hành khách</p>
+            </header>
+
+            <div class="game-frame">
+                <iframe
+                    src="https://html5.gamemonetize.co/oqs0yddepvccu05lu6pibq21lthwt8ia/"
+                    frameborder="0"
+                    allowfullscreen
+                    scrolling="no"
+                    title="Traffic Jam Hop On Game"
+                >
+                    Trình duyệt của bạn không hỗ trợ iframe.
+                </iframe>
+            </div>
+
+            <footer class="game-footer">
+                <div class="game-meta">
+                    <strong>Thể loại</strong>
+                    Logic
+                </div>
+                <div class="game-meta">
+                    <strong>Độ khó</strong>
+                    Trung bình
+                </div>
+                <div class="game-meta">
+                    <strong>Thời gian</strong>
+                    5-8 phút
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

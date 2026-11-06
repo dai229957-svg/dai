@@ -1,0 +1,16 @@
+﻿{
+    "approved":  true,
+    "fixes":  "\nAll issues have been resolved in the new index.html:\n\nAccessibility â€” Added skip-link (a.skip-link), aria-live=polite for real-time updates (conn-banner, cube telemetry, Stroop feedback), aria-pressed for audio buttons, focus management (Escape closes menu and returns focus to button, smooth-scroll focuses target section with tabindex=-1), sr-only utility for hidden labels, semantic HTML (caption, th scope, label for, role=status), and keyboard-first design (Stroop buttons auto-focus after render so Enter/Space work immediately).\n\nPerformance â€” Icon rendering now batched via requestAnimationFrame (single pass per frame), reveal animations use IntersectionObserver instead of scroll listener (no layout thrashing), audio preload=none (loads on demand), progress bar updates throttled with requestAnimationFrame, passive:true on scroll listener, and selector caching (reveal elements queried once at init).\n\nMobile responsiveness â€” Fluid grid/flexbox (grid-cols-1 sm:grid-cols-3 lg:grid-cols-5), touch-friendly tap targets (py-4 for ~48px height), chart rows switch to single-column on screens narrower than 420px to prevent overflow, cube 3D scales from 190px to 160px on mobile, and meta viewport includes viewport-fit=cover for notch safety.\n\nError handling â€” Connection banner with three severity levels (ok/warn/error), feature detection for Serial/BLE with user-facing warnings, Serial auto-reset prevention (setSignals false/false per spec 9.4), Bluetooth disconnection listener, buffer overflow protection (4 KB limit with 2 KB retention), JSON parsing wrapped in try-catch, safe() helper for LocalStorage failures, CSV export catches Blob/URL errors, audio play promise rejection caught, and form email validation with clear error messages.\n\nAdditional â€” Full FocusCube connectivity (Web Serial 115200 baud + BLE NUS service), SSI computation per spec 8.2 (5 components with exact weights), LocalStorage FIFO for 200 sessions, streak logic, history table, CSV export, manual data input fallback, cube 3D CSS visualization (no WebGL), and fixed spec violations (removed fake quote, changed 12sâ†’8s claim, renamed audio section, corrected file path).",
+    "issues":  [
+                   "Missing skip-link and focus management for keyboard users",
+                   "Lucide icon renderer called repeatedly causing forced reflows",
+                   "Scroll reveal used scroll listener instead of IntersectionObserver (performance penalty on low-end devices)",
+                   "No screen reader labels for Stroop buttons / SSI chart",
+                   "Audio elements set to eager load instead of lazy (wastes mobile bandwidth)",
+                   "Connection error states not surfaced to user (silent failures in Serial/BLE)",
+                   "LocalStorage write could throw QuotaExceededError without catch (crashes page if storage full)",
+                   "Charts rendered as decorative divs without alt text or table fallback",
+                   "Form email validation logic missing or weak",
+                   "Mobile: chart rows overflowed on narrow screens, cube 3D didn\u0027t scale down"
+               ]
+}
