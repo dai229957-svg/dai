@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
     <title>Đo lường & Cải thiện Attention Span (U-Invent 9, VNUK)</title>
-    <meta name="description" content="FocusCube — khối lập phương 100 mm đo mức độ gián đoạn trong phiên học. Website đo phản xạ Stroop, hiển thị Chỉ số Ổn định Phiên học (SSI) và lịch sử tiến bộ."/>
+    <meta name="description" content="ATM LAB — khối lập phương 100 mm đo mức độ gián đoạn trong phiên học. Website đo phản xạ Stroop, hiển thị Chỉ số Ổn định Phiên học (SSI) và lịch sử tiến bộ."/>
     <link href="result_image-removebg-preview.png" rel="icon" type="image/png"/>
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -107,7 +107,6 @@
         :fullscreen #s-word { font-size: 8rem; }
 
         @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
-        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
         .shake { animation: shake .4s cubic-bezier(.36,.07,.19,.97) both; }
         @keyframes flashGreen {
             0% { background-color: #DCFCE7; box-shadow: 0 0 0 2px #4ADE80, 0 0 26px rgba(74,222,128,.45); transform: scale(1.04); }
@@ -126,7 +125,7 @@
 
         input[type="email"]:focus { border-color: #6366F1 !important; box-shadow: 0 0 0 3px rgba(99,102,241,.18); }
 
-        /* ===== FOCUSCUBE — khối 3D CSS (không dùng WebGL để nhẹ máy) ===== */
+        /* ===== ATM LAB — khối 3D CSS (không dùng WebGL để nhẹ máy) ===== */
         .cube-stage {
             width: 190px; height: 190px; margin: 0 auto;
             perspective: 900px; perspective-origin: 50% 45%;
@@ -186,12 +185,12 @@
                 <span class="bg-indigo-50 p-1.5 rounded-lg group-hover:bg-indigo-100 transition duration-300 border border-indigo-100">
                     <i data-lucide="box" class="w-7 h-7 text-indigo-600" aria-hidden="true"></i>
                 </span>
-                <span class="text-xl font-extrabold tracking-tight header-brand">FOCUSCUBE</span>
+                <span class="text-xl font-extrabold tracking-tight header-brand">ATM LAB</span>
             </a>
             <div class="hidden lg:flex items-center gap-1">
                 <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#home">Tổng quan</a>
                 <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#knowledge">Kiến thức</a>
-                <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#focuscube">FocusCube</a>
+                <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#focuscube">ATM LAB</a>
                 <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#stroop-test">Đo lường</a>
                 <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#results">Kết quả</a>
                 <a class="nav-item px-3 py-2 text-sm font-bold rounded-lg smooth-link" href="#audio-station">Âm nền</a>
@@ -206,7 +205,7 @@
         <div id="mobileMenu" class="hidden lg:hidden bg-white border-t border-indigo-100 p-4 space-y-2 shadow-xl absolute w-full z-50">
             <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#home">Trang chủ</a>
             <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#knowledge">Kiến thức</a>
-            <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#focuscube">Kết nối FocusCube</a>
+            <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#focuscube">Kết nối ATM LAB</a>
             <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#stroop-test">Đo lường</a>
             <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#results">Kết quả &amp; SSI</a>
             <a class="block px-4 py-3 font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 rounded-lg smooth-link transition" href="#audio-station">Âm nền hỗ trợ</a>
@@ -225,7 +224,7 @@
                         <span class="w-2 h-2 bg-amber-300 rounded-full status-dot" aria-hidden="true"></span> U-Invent 9 · Cuộc thi Sáng tạo KHCN dành cho học sinh THPT toàn quốc lần thứ 9 (VNUK)
                     </span>
                     <h1 class="reveal text-4xl md:text-6xl font-extrabold mb-6 leading-tight" style="transition-delay: 70ms;">
-                        ATS LAB<br/> <span class="text-amber-300 marker-highlight">theo dõi</span> sự tập trung
+                        ATM LAB<br/> <span class="text-amber-300 marker-highlight">theo dõi</span> sự tập trung
                     </h1>
                     <p class="reveal text-lg md:text-2xl text-indigo-100 mb-10 max-w-3xl mx-auto font-medium leading-relaxed" style="transition-delay: 140ms;">
                         Một khối lập phương 100 mm đặt trên bàn học. Mỗi lần bạn xoay mặt đỏ lên trên,
@@ -234,7 +233,7 @@
                     </p>
                     <div class="reveal flex flex-col sm:flex-row justify-center gap-4" style="transition-delay: 210ms;">
                         <a href="#focuscube" class="btn-jelly bg-amber-400 text-amber-950 px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-amber-900/20 hover:bg-amber-300 flex items-center justify-center gap-2 smooth-link">
-                            <i data-lucide="bluetooth" class="w-5 h-5" aria-hidden="true"></i> KẾT NỐI FOCUSCUBE
+                            <i data-lucide="bluetooth" class="w-5 h-5" aria-hidden="true"></i> KẾT NỐI ATM LAB
                         </a>
                         <a href="#stroop-test" class="btn-jelly bg-white/10 backdrop-blur-md text-white border border-white/25 px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:bg-white/20 hover:border-white/40 flex items-center justify-center gap-2 smooth-link">
                             <i data-lucide="zap" class="w-5 h-5" aria-hidden="true"></i> ĐO PHẢN XẠ (STROOP)
@@ -329,12 +328,12 @@
             </div>
         </section>
 
-        <!-- ============ FOCUSCUBE — KẾT NỐI THIẾT BỊ ============ -->
+        <!-- ============ ATM LAB — KẾT NỐI THIẾT BỊ ============ -->
         <section class="section-padding" id="focuscube">
             <div class="text-center mb-12 reveal">
                 <span class="eyebrow block mb-3">02 · Thiết bị</span>
                 <h2 class="text-4xl font-extrabold text-indigo-950 mb-4 inline-flex items-center gap-3">
-                    <i data-lucide="box" class="text-indigo-600" aria-hidden="true"></i> Kết nối FocusCube
+                    <i data-lucide="box" class="text-indigo-600" aria-hidden="true"></i> Kết nối ATM LAB
                 </h2>
                 <p class="text-slate-500 max-w-2xl mx-auto text-lg">
                     Kết nối bằng <b>Bluetooth</b> (BLE) hoặc <b>USB Serial</b>. Cube tự quyết định chế độ —
@@ -352,7 +351,7 @@
 
                         <div id="conn-banner" role="status" aria-live="polite"
                              class="mb-5 rounded-2xl border border-indigo-100 bg-indigo-50/60 px-4 py-3 text-sm font-medium text-indigo-900">
-                            Chưa kết nối thiết bị. Hãy cắm cáp USB hoặc bật Bluetooth trên FocusCube.
+                            Chưa kết nối thiết bị. Hãy cắm cáp USB hoặc bật Bluetooth trên ATM LAB.
                         </div>
 
                         <div class="flex flex-col sm:flex-row gap-3">
@@ -409,11 +408,11 @@
                     <!-- Bảng chế độ -->
                     <div class="bg-white rounded-3xl border border-indigo-100 shadow-sm p-6 md:p-8 reveal">
                         <h3 class="text-xl font-bold text-indigo-950 mb-4 flex items-center gap-2">
-                            <i data-lucide="layout-grid" class="w-5 h-5 text-indigo-600" aria-hidden="true"></i> Sáu mặt của FocusCube
+                            <i data-lucide="layout-grid" class="w-5 h-5 text-indigo-600" aria-hidden="true"></i> Sáu mặt của ATM LAB
                         </h3>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm border-collapse min-w-[520px]">
-                                <caption class="sr-only">Bảng tra cứu 6 mặt FocusCube và chế độ tương ứng</caption>
+                                <caption class="sr-only">Bảng tra cứu 6 mặt ATM LAB và chế độ tương ứng</caption>
                                 <thead>
                                     <tr class="text-left text-slate-500 text-xs uppercase tracking-wider">
                                         <th scope="col" class="py-2 pr-4">Mặt</th>
@@ -434,7 +433,7 @@
                         <h3 class="text-lg font-bold mb-1">Trạng thái cube</h3>
                         <p id="faceLabel" class="text-indigo-200 text-sm mb-5" aria-live="polite">Chưa nhận dữ liệu từ thiết bị.</p>
 
-                        <div class="cube-stage" id="cubeStage" role="img" aria-label="Mô phỏng khối FocusCube, mặt đang hướng lên chưa xác định">
+                        <div class="cube-stage" id="cubeStage" role="img" aria-label="Mô phỏng khối ATM LAB, mặt đang hướng lên chưa xác định">
                             <div class="cube-scene" id="cubeScene">
                                 <div class="cube-face fc-screen"><i data-lucide="monitor" class="w-6 h-6" aria-hidden="true"></i><span>Màn hình</span><span class="fc-face-tag">Xem kết quả</span></div>
                                 <div class="cube-face fc-black"><i data-lucide="moon" class="w-6 h-6" aria-hidden="true"></i><span>Đen</span><span class="fc-face-tag">Tắt</span></div>
@@ -590,7 +589,7 @@
                                     <tbody id="historyRows" class="text-slate-600"></tbody>
                                 </table>
                             </div>
-                            <p id="historyEmpty" class="text-sm text-slate-400 mt-3">Chưa có lịch sử. Hoàn tất một phiên FocusCube để dữ liệu xuất hiện ở đây.</p>
+                            <p id="historyEmpty" class="text-sm text-slate-400 mt-3">Chưa có lịch sử. Hoàn tất một phiên ATM LAB để dữ liệu xuất hiện ở đây.</p>
                         </div>
                     </div>
                 </div>
@@ -658,7 +657,7 @@
                     </div>
                     <div>
                         <span class="eyebrow block mb-3" style="color:#7C3AED;">Lưu ý phương pháp</span>
-                        <h2 class="text-3xl font-extrabold text-indigo-950 mb-6 flex items-center gap-3"><i data-lucide="quote" class="w-6 h-6 text-violet-600" aria-hidden="true"></i> Điều FocusCube không nói</h2>
+                        <h2 class="text-3xl font-extrabold text-indigo-950 mb-6 flex items-center gap-3"><i data-lucide="quote" class="w-6 h-6 text-violet-600" aria-hidden="true"></i> Điều ATM LAB không nói</h2>
                         <div class="bg-gradient-to-br from-indigo-600 to-violet-600 p-8 rounded-[2rem] text-white shadow-xl shadow-indigo-200 relative overflow-hidden">
                             <i data-lucide="quote" class="absolute top-6 right-6 text-white/15 w-16 h-16" aria-hidden="true"></i>
                             <ul class="mb-6 relative z-10 pt-2 leading-relaxed text-lg text-indigo-50 space-y-3 list-disc pl-5">
@@ -696,7 +695,7 @@
                     <div>
                         <div class="flex items-center gap-2 mb-6">
                             <i data-lucide="box" class="w-8 h-8 text-indigo-600" aria-hidden="true"></i>
-                            <span class="font-bold text-2xl text-indigo-950 tracking-tight">FOCUSCUBE</span>
+                            <span class="font-bold text-2xl text-indigo-950 tracking-tight">ATM LAB</span>
                         </div>
                         <p class="text-slate-500 mb-6 max-w-sm">
                             U-Invent 9 · Cuộc thi Sáng tạo KHCN dành cho học sinh THPT toàn quốc lần thứ 9 (VNUK).<br>
@@ -716,7 +715,7 @@
                         <p id="newsletterMsg" class="text-sm mt-3" role="status" aria-live="polite"></p>
                     </div>
                 </div>
-                <div class="mt-8 text-center text-xs text-slate-400">© 2026 FocusCube · Attention Metrics Lab. All rights reserved.</div>
+                <div class="mt-8 text-center text-xs text-slate-400">© 2026 ATM LAB · Attention Metrics Lab. All rights reserved.</div>
             </div>
         </footer>
     </main>
@@ -1009,7 +1008,7 @@
                 let advice = '';
                 if (q_score <= 8) advice = 'Bạn kiểm soát khá tốt! Hãy duy trì nhé. 👍';
                 else if (q_score <= 14) advice = 'Cảnh báo nhẹ! Bạn nên bớt dùng điện thoại lại. ⚠️';
-                else advice = 'Có dấu hiệu gián đoạn nhiều — thử dùng FocusCube để đo và theo dõi nhé. 🚨';
+                else advice = 'Có dấu hiệu gián đoạn nhiều — thử dùng ATM LAB để đo và theo dõi nhé. 🚨';
                 $('#q-msg').innerText = advice;
                 return;
             }
@@ -1034,7 +1033,7 @@
         }
 
         /* =========================================================
-           6. FOCUSCUBE — kết nối: Web Serial + Web Bluetooth
+           6. ATM LAB — kết nối: Web Serial + Web Bluetooth
            ========================================================= */
         const connBanner = $('#conn-banner');
         function setConnBanner(msg, kind) {
@@ -1073,12 +1072,12 @@
             if (!f) {
                 cubeScene.style.transform = 'rotateX(-18deg) rotateY(-28deg)';
                 $('#faceLabel').textContent = 'Cube đang được cầm / nằm nghiêng — mặt hướng lên chưa xác định.';
-                $('#cubeStage').setAttribute('aria-label', 'Mô phỏng khối FocusCube, mặt đang hướng lên chưa xác định');
+                $('#cubeStage').setAttribute('aria-label', 'Mô phỏng khối ATM LAB, mặt đang hướng lên chưa xác định');
                 return;
             }
             cubeScene.style.transform = f.rot;
             $('#faceLabel').textContent = 'Mặt hướng lên: ' + f.name + ' · Chế độ ' + f.mode;
-            $('#cubeStage').setAttribute('aria-label', 'Mô phỏng khối FocusCube. Mặt đang hướng lên: ' + f.name + ', chế độ ' + f.mode);
+            $('#cubeStage').setAttribute('aria-label', 'Mô phỏng khối ATM LAB. Mặt đang hướng lên: ' + f.name + ', chế độ ' + f.mode);
         }
         applyFace(-1);
 
@@ -1109,7 +1108,7 @@
                 return;
             }
             try {
-                setConnBanner('Đang chờ bạn chọn cổng USB của FocusCube…', 'warn');
+                setConnBanner('Đang chờ bạn chọn cổng USB của ATM LAB…', 'warn');
                 serialPort = await navigator.serial.requestPort({
                     filters: [{ usbVendorId: 0x10C4 }, { usbVendorId: 0x1A86 }]
                 });
@@ -1122,7 +1121,7 @@
                 Transport.write = (str) => serialPort.writer.write(str + '\n');
                 serialKeepAlive = true;
                 readSerial();
-                setConnBanner('Đã mở cổng USB. Đang chờ dữ liệu từ FocusCube…', 'ok');
+                setConnBanner('Đã mở cổng USB. Đang chờ dữ liệu từ ATM LAB…', 'ok');
                 $('#btnDisconnect').disabled = false;
             } catch (err) {
                 if (err && err.name === 'NotFoundError') {
@@ -1178,7 +1177,7 @@
                 return;
             }
             try {
-                setConnBanner('Đang tìm FocusCube trong tầm Bluetooth… (đảm bảo đã bật Bluetooth trên cube)', 'warn');
+                setConnBanner('Đang tìm ATM LAB trong tầm Bluetooth… (đảm bảo đã bật Bluetooth trên cube)', 'warn');
                 bleDevice = await navigator.bluetooth.requestDevice({
                     filters: [{ services: [NUS_SERVICE] }, { namePrefix: 'FocusCube' }],
                     optionalServices: [NUS_SERVICE]
@@ -1471,7 +1470,7 @@
         function exportCsv() {
             const list = loadSessions();
             if (!list.length) {
-                setConnBanner('Chưa có phiên nào để xuất. Hãy hoàn tất ít nhất một phiên FocusCube.', 'warn');
+                setConnBanner('Chưa có phiên nào để xuất. Hãy hoàn tất ít nhất một phiên ATM LAB.', 'warn');
                 return;
             }
             const header = ['id', 'plannedMin', 'actualMin', 'sessionFace', 'endReason', 'flips', 'lifts',
@@ -1487,7 +1486,7 @@
                 ].map((v) => (v == null ? '' : String(v))).join(','));
             });
             try {
-                const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+                const blob = new Blob(['\uFEFF' + lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
@@ -1514,7 +1513,7 @@
                         $('#stCal').textContent = msg.cal ? 'Đã hiệu chỉnh' : 'Chưa hiệu chỉnh';
                         $('#stLuxK').textContent = (msg.luxK != null ? msg.luxK : '—');
                         $('#stLink').textContent = (Transport.kind === 'ble' ? 'Bluetooth' : 'USB');
-                        setConnBanner('Đã kết nối FocusCube (firmware ' + (msg.fw || '?') + '). Xoay mặt Đỏ lên trên để bắt đầu phiên 25 phút.', 'ok');
+                        setConnBanner('Đã kết nối ATM LAB (firmware ' + (msg.fw || '?') + '). Xoay mặt Đỏ lên trên để bắt đầu phiên 25 phút.', 'ok');
                         break;
                     case 'st':
                         this.lastState = msg;
